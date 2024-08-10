@@ -1,5 +1,5 @@
 <?php
-$node = 'http://localhost:53000';
+$node = 'http://127.0.0.1:53000/json_rpc';
 return array(
 	'api' => $node,
 	'blockTargetInterval' => 60,
