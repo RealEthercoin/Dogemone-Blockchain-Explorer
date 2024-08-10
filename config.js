@@ -1,4 +1,4 @@
-var api = 'http://95.179.157.32:53000';
+var api = 'https://explorer.dogemone.online/json_rpc';
 var apiList = ["http://127.0.0.1:53000", "http://65.20.104.165:53000"];
 
 var blockTargetInterval = 60;

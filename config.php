@@ -1,5 +1,5 @@
 <?php
-$node = 'http://95.179.157.32:53000';
+$node = 'https://explorer.dogemone.online/json_rpc';
 return array(
 	'api' => $node,
 	'blockTargetInterval' => 60,
