@@ -17,7 +17,7 @@
 			</div>
 			<div class="card-action">
 				<button onclick="generate()" class="waves-effect waves-light btn light-blue darken-4">Generate PaymentID</button>
-				<button onclick="decode()" class="waves-effect waves-light btn light-blue darken-4">Decode PaymentID</button> 
+				<button onclick="decode()" class="waves-effect waves-light btn light-blue darken-4">Decode PaymentID</button>
 			</div>
 			<div class="card-content">
 				<div class="row">
@@ -25,7 +25,7 @@
 						<p>Enter short memo to encode it (ASCII only):</p>
 						<div class="form-group">
 						  <input class="form-control input-lg" type="text" id="text2encode" maxlength="32">
-						</div>			
+						</div>
 					</div>
 				</div>
 			</div>
@@ -38,9 +38,9 @@
 <div class="row">
     <div class="col s12 s12">
       <div class="card-panel">
-		<p>Payment ID is optional transaction attachment that is usually used to identify transactions. 
-			Because of anonymity of Karbo transactions, without Payment ID you will not be able to distinguish them.
-			You can generate random Payment IDs and give them to each user who is to send you some Karbo.
+		<p>Payment ID is optional transaction attachment that is usually used to identify transactions.
+			Because of anonymity of Dogemone transactions, without Payment ID you will not be able to distinguish them.
+			You can generate random Payment IDs and give them to each user who is to send you some Dogemone.
 			This way you can tie payments to users.</p>
     </div>
   </div>
@@ -49,7 +49,7 @@
 <script>
 	currentPage = {
 		destroy: function () {
-			
+
 		},
 		init: function () {
 			$('.tooltipped').tooltip();
@@ -85,7 +85,7 @@
 	}
 
 	function pad(pad, str, padLeft) {
-		if (typeof str === 'undefined') 
+		if (typeof str === 'undefined')
 			return pad;
 		if (padLeft) {
 			return (pad + str).slice(-pad.length);

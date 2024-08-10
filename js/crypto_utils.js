@@ -1817,13 +1817,13 @@ var cnUtil = (function(initConfig) {
         keys.spend = this.generate_keys(first);
         // this is monero style
         // var second = this.keccak(keys.spend.sec, 32, 32);
-        // Karbowanec paperwallet compatible
+        // Dogemone paperwallet compatible
         var second = this.keccak(first, 32, 32);
         keys.view = this.generate_keys(second);
         keys.public_addr = this.pubkeys_to_string(keys.spend.pub, keys.view.pub);
 
 	var prefix = this.encode_varint(CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX);
-  	var privateKeyBase = prefix + keys.spend.pub + keys.view.pub + keys.spend.sec + keys.view.sec; // Karbowanec privateKeyBase
+  	var privateKeyBase = prefix + keys.spend.pub + keys.view.pub + keys.spend.sec + keys.view.sec; // Dogemone privateKeyBase
     var checksum = this.cn_fast_hash(privateKeyBase).slice(0, ADDRESS_CHECKSUM_SIZE * 2);
 
 	keys.privateKeys = cnBase58.encode(privateKeyBase + checksum);
@@ -1845,7 +1845,7 @@ var cnUtil = (function(initConfig) {
         if (public_addr.toUpperCase().slice(0, prefix.length) != prefix.toUpperCase())
           return null;
         // var second = this.keccak(keys.spend.sec, 32, 32);
-        // Karbowanec paperwallet compatible
+        // Dogemone paperwallet compatible
         var second = this.keccak(first, 32, 32);
         keys.view = this.generate_keys(second);
         keys.public_addr = this.pubkeys_to_string(keys.spend.pub, keys.view.pub);
@@ -1853,7 +1853,7 @@ var cnUtil = (function(initConfig) {
 
 
 	var prefix = this.encode_varint(CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX);
-  	var privateKeyBase = prefix + keys.spend.pub + keys.view.pub + keys.spend.sec + keys.view.sec; // Karbowanec privateKeyBase
+  	var privateKeyBase = prefix + keys.spend.pub + keys.view.pub + keys.spend.sec + keys.view.sec; // Dogemone privateKeyBase
     var checksum = this.cn_fast_hash(privateKeyBase).slice(0, ADDRESS_CHECKSUM_SIZE * 2);
 
 	keys.privateKeys = cnBase58.encode(privateKeyBase + checksum);
@@ -2071,7 +2071,7 @@ var cnUtil = (function(initConfig) {
             throw "assert failed" + (val !== undefined ? ': ' + val : '');
         }
     }
-	
+
 	function pubkeysToString(spend, view)
 	{
         var prefix = encodeVarint(CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX);

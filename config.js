@@ -1,11 +1,11 @@
-var api = 'https://karbo.club/services/node_web';
-var apiList = ["https://node.karbo.org:32448", "https://node2.karbo.org:32448"];
+var api = 'http://95.179.157.32:53000';
+var apiList = ["http://127.0.0.1:53000", "http://65.20.104.165:53000"];
 
-var blockTargetInterval = 240;
+var blockTargetInterval = 60;
 var coinUnits = 1000000000000;
-var symbol = 'KRB';
+var symbol = 'DME';
 var refreshDelay = 30000;
 var blocksPerPage = 20;
 var whiteTheme = "css/light.css";
 var nightTheme = "css/dark.css";
-var addressPattern = new RegExp("^K[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{94}$");
+var addressPattern = new RegExp("^DME[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{94}$");

@@ -7,7 +7,7 @@
 
 <div class="row">
     <div class="col s12 s12">
-		<h2 class="light-blue-text text-darken-4"><i class="material-icons">leaderboard</i> Karbo voluntary richlist</h2>
+		<h2 class="light-blue-text text-darken-4"><i class="material-icons">leaderboard</i> Dogemone voluntary richlist</h2>
 	</div>
 </div>
 
@@ -15,13 +15,13 @@
     <div class="col s12 s12">
       <div class="card-panel">
         <p>
-			Karbo is fundamentally private, it is based in the Cryptonote protocol.
-        
+						Dogemone is fundamentally private, it is based in the Cryptonote protocol.
+
             Balance and history of the particular address are hidden.
-        
-			Therefore, it is impossible to create full richlist. But... 
+
+			Therefore, it is impossible to create full richlist. But...
 		</p>
-		
+
 		<p>
 			They that trust in their wealth, here can boast themselves in the multitude of their riches by submitting their public address and reserve proof. So here they are:
 		</p>
@@ -101,7 +101,7 @@
 	var Richlist = [];
 
 	var Total = 0;
-   
+
 	currentPage = {
 		destroy: function () {
 			if (xhrCheckReserve) xhrCheckReserve.abort();
@@ -128,13 +128,13 @@
 			$.when(
 				renderRichlist()
 			).then(function () {
-				
+
 			});
 
 		})
 		.fail(function() {
 			console.log( "Error getting richlist from file..." );
-		});	
+		});
 	}
 
 	function renderRichlist() {
@@ -142,7 +142,7 @@
 			var address = rich.address;
 			var proof = rich.reserve_proof;
 			var height = lastStats.last_known_block_index;
-			
+
 			xhrCheckReserve = $.ajax({
 			url: api + '/json_rpc',
 			method: "POST",
@@ -173,9 +173,9 @@
 
 					Total += balance;
 
-					$('#riches_rows').append('<tr><td>' + 
+					$('#riches_rows').append('<tr><td>' +
 						(isvalid ? '<i class="fas fa-check-circle green-text"></i>' : '<i class="fas fa-times-circle red-text"></i>') +
-						'</td><td>' + address + '</td>' + 
+						'</td><td>' + address + '</td>' +
 						'<td>' + (isvalid ? getReadableCoins(declared, 2, true) : '-') + '</td>' +
 						'<td>' + (isvalid ? getReadableCoins(spent, 2, true) : '-') + '</td>' +
 						'<td>' + (isvalid ? getReadableCoins(balance, 2, true) : '-') + '</td></tr>'
@@ -230,7 +230,7 @@
 				if (data.error) {
 					M.toast({html: data.error.message, classes: 'red'}, 5000);
 				} else {
-					var res = data.result;			
+					var res = data.result;
 					var isvalid = JSON.parse(res.good);
 					if (isvalid) {
 						var rich = JSON.stringify({ address: address.val(), reserve_proof: signature.val() });
@@ -253,7 +253,7 @@
 			cache: 'false',
 			success: function(data) {
 				M.toast({html: data.result});
-				//location.reload(); 
+				//location.reload();
 			},
 			error: function() {
 				M.toast({html: "Error submitting richlist entry"});
