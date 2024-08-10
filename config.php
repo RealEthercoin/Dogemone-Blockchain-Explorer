@@ -1,5 +1,5 @@
 <?php
-$node = 'https://explorer.dogemone.online/json_rpc';
+$node = 'https://explorer.dogemone.online/rpc';
 return array(
 	'api' => $node,
 	'blockTargetInterval' => 60,
