@@ -168,7 +168,7 @@
 		}
 		return maxEl;
 	}
-	
+
 	window.commonHeight;
 	window.commonHash;
 	window.commonVersion;
@@ -194,29 +194,29 @@
 			updateStats();
 		}
 	};
-	
+
 	function isValidHttpUrl(string) {
 		let url;
 
 		try {
 			url = new URL(string);
 		} catch (_) {
-			return false;  
+			return false;
 		}
 
 		return url.protocol === "http:" || url.protocol === "https:";
 	}
-	
+
 	$('#submit_node_button').click(function (e) {
 		var url = document.getElementById('node_address').value;
-		
+
 		if (isValidHttpUrl(url)) {
 			submitNode(url);
 		}
 		else {
 			M.toast({html: "Invalid node URL"});
 		}
-		
+
 		e.preventDefault();
 	});
 
@@ -224,7 +224,7 @@
 
 	function getNodes() {
 		var jqxhr = $.getJSON( "api/nodes.json", function() {
-		
+
 		})
 		.done(function(data) {
 			console.log( "Got nodes..." );
@@ -251,7 +251,7 @@
 		})
 		.always(function() {
 			console.log( "Complete getting list of nodes..." );
-		});	
+		});
 	}
 
 	function updateStats() {
@@ -359,7 +359,7 @@
 				if (!isNaN(data.fee_amount)) {
 					var nodeFee = data.fee_amount;
 					console.log("fee for " + nname + ": " + nodeFee);
-					updateText('fee-' + nname,  parseFloat(getReadableCoins(nodeFee, 12, true)).toString() + "\xa0KRB");
+					updateText('fee-' + nname,  parseFloat(getReadableCoins(nodeFee, 12, true)).toString() + "\xa0DME");
 				}
 			}).fail(function() {
 				console.log( "Error getting node's fee: " + nname );
