@@ -1,4 +1,4 @@
-var api = 'http://localhost:53000/json_rpc';
+var api = 'http://localhost:53000';
 var apiList = ["http://127.0.0.1:53000", "http://65.20.104.165:53000"];
 
 var blockTargetInterval = 60;
