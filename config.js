@@ -1,5 +1,5 @@
-var api = 'https://explorer.dogemone.online/rpc';
-var apiList = ["https://explorer.dogemone.online/rpc", "http://65.20.104.165:53000"];
+var api = 'https://explorer.dogemone.online/json_rpc';
+var apiList = ["https://explorer.dogemone.online/json_rpc"];
 
 var blockTargetInterval = 60;
 var coinUnits = 1000000000000;
