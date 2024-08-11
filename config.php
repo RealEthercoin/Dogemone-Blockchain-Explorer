@@ -1,5 +1,5 @@
 <?php
-$node = 'https://node.dogemone.online:52000/';
+$node = 'https://node.dogemone.online:52000';
 return array(
 	'api' => $node,
 	'blockTargetInterval' => 60,

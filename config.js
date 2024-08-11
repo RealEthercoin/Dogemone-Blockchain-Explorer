@@ -1,5 +1,5 @@
-var api = 'https://node.dogemone.online:52000/';
-var apiList = ["https://node.dogemone.online:52000/"];
+var api = 'https://node.dogemone.online:52000';
+var apiList = ["https://node.dogemone.online:52000"];
 
 var blockTargetInterval = 60;
 var coinUnits = 1000000000000;
